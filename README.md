@@ -1,21 +1,20 @@
 # ARM²Lab website
 
-A static academic lab website inspired by the clear news and publication structure of Ignacio Carlucho’s personal site. It is original code and does not use the al-folio theme. No build tools are required.
+A multi-page academic lab website for GitHub Pages. Each navigation tab opens a separate HTML page. No build tools are required.
 
-## Preview
-Open `index.html` in a browser. For a local server, run `python3 -m http.server 8000` in this folder and visit `http://localhost:8000`.
+## Update the live GitHub Pages site
 
-## Update content
-- `data.js`: members, news, publications, video links. Add confirmed team members and replace the current video links with direct approved YouTube URLs. Publication links currently lead to researcher profiles; replace with individual paper URLs if desired.
-- `index.html`: research and introductory copy, contact details, and section order.
-- `style.css`: colours, type and layout.
+1. Unzip this package and open `arm2lab-site`.
+2. In the GitHub repository, choose **Add file → Upload files**.
+3. Upload the files **inside** `arm2lab-site`, including all seven `.html` pages, `style.css`, `data.js`, `script.js`, and the `images` folder. Keep `index.html` at the repository root.
+4. Commit the changes. Existing files with matching names must be replaced; GitHub's web uploader may reject files already in the repository. If so, use GitHub Desktop, or edit each file in GitHub's web editor and upload the four new images through **Add file → Upload files**.
 
-The people cards use initials by design. Replace them with approved portrait images when available. The video panels are designed illustrations, not video thumbnails.
+## Content
 
-## Publish on GitHub Pages
-1. Create a public GitHub repository named `arm2lab.github.io` if the intended address is `https://arm2lab.github.io`. The name must match the GitHub account or organisation name. For any other repository name, the address will be `https://USERNAME.github.io/REPOSITORY/`.
-2. Upload all files from this folder to the repository root and commit them.
-3. In the repository, open Settings → Pages. Under Build and deployment, select Deploy from a branch, then `main` and `/(root)`. Save.
-4. Review the published site on desktop and mobile. You may later add a custom domain.
+Edit `data.js` to update members, publications, news and video links. The four supplied portraits were provisionally paired in attachment order with Adip, Sheena, Christopher and David; **verify the matches before publishing**. Jacob appears with initials until a photo is added. The fifth supplied photo is used for Prab Singh.
 
-The published Google Site remains independent until you choose to replace its link or redirect visitors.
+The publication links currently lead to the researchers' publication lists. The video links currently lead to the old Google Site. Replace these with direct paper and video URLs when available.
+
+Edit `index.html` for the lab description and research areas; edit `style.css` for typography, colour and layout.
+
+To preview locally, open `index.html` in a browser, or run `python3 -m http.server 8000` in this folder and visit `http://localhost:8000`.
