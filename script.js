@@ -8,7 +8,7 @@ if(document.querySelector('#paper-list')) {
   const years = [...new Set(papers.map(p => p.year))].sort((a,b) => b-a);
   list.innerHTML = years.map(year => `<section class="publication-year" aria-label="Publications in ${year}"><h2>${year}</h2>${papers.filter(p => p.year === year).map(p => {
     const article = p.doi ? `https://doi.org/${p.doi}` : p.url;
-    return `<article class="paper"><div><h3><a href="${esc(safeUrl(article))}" target="_blank" rel="noopener">${esc(p.title)}</a></h3><p>${esc(p.venue)}${p.shared ? ' <span class="shared-badge">With Ignacio Carlucho</span>' : ''}</p><div class="paper-links">${p.pdf ? `<a href="${esc(safeUrl(p.pdf))}" target="_blank" rel="noopener" aria-label="PDF of ${esc(p.title)}">PDF ↗</a>` : ''}<a href="${esc(safeUrl(article))}" target="_blank" rel="noopener">${p.doi ? 'DOI' : 'Record'} ↗</a></div></div></article>`;
+    return `<article class="paper"><div><h3><a href="${esc(safeUrl(article))}" target="_blank" rel="noopener">${esc(p.title)}</a></h3><p class="paper-authors">${esc(p.authors)}</p><p>${esc(p.venue)}${p.shared ? ' <span class="shared-badge">With Ignacio Carlucho</span>' : ''}</p><div class="paper-links">${p.pdf ? `<a href="${esc(safeUrl(p.pdf))}" target="_blank" rel="noopener" aria-label="PDF of ${esc(p.title)}">PDF ↗</a>` : ''}<a href="${esc(safeUrl(article))}" target="_blank" rel="noopener">${p.doi ? 'DOI' : 'Record'} ↗</a></div></div></article>`;
   }).join('')}</section>`).join('');
 }
 if(document.querySelector('#video-list')) document.querySelector('#video-list').innerHTML = videos.map(v => `<a class="video-item" href="${esc(safeUrl(v.url))}" target="_blank" rel="noopener"><small>${esc(v.label)}</small><h3>${esc(v.title)} ↗</h3></a>`).join('');
