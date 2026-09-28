@@ -1,0 +1,10 @@
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl = s => /^https:\/\//.test(s) ? s : '#';
+document.querySelector('#year').textContent = new Date().getFullYear();
+document.querySelector('#member-list').innerHTML = members.map(m => `<a class="member" href="${esc(safeUrl(m.url || '#'))}" target="_blank" rel="noopener"><strong>${esc(m.name)}</strong><small>${esc(m.role)}</small></a>`).join('');
+document.querySelector('#news-list').innerHTML = news.map(n => `<a class="paper" href="${esc(safeUrl(n.url))}" target="_blank" rel="noopener"><span class="paper-year">${esc(n.date)}</span><div><h3>${esc(n.title)}</h3></div><span class="paper-arrow">↗</span></a>`).join('');
+document.querySelector('#paper-list').innerHTML = papers.map(p => `<a class="paper" href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener"><span class="paper-year">${esc(p.year)}</span><div><h3>${esc(p.title)}</h3><p>${esc(p.venue)}</p></div><span class="paper-arrow">↗</span></a>`).join('');
+document.querySelector('#video-list').innerHTML = videos.map(v => `<a class="video-card" href="${esc(safeUrl(v.url))}" target="_blank" rel="noopener"><div class="video-visual"><span class="play" aria-hidden="true">▶</span></div><div class="video-body"><small>${esc(v.label)}</small><h3>${esc(v.title)} ↗</h3></div></a>`).join('');
+const toggle = document.querySelector('.menu-toggle'), nav = document.querySelector('nav');
+toggle.addEventListener('click', () => {const open = nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close menu':'Open menu')});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));
