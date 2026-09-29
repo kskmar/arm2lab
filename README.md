@@ -1,20 +1,20 @@
 # ARM²Lab website
 
-A multi-page academic lab website for GitHub Pages. Each navigation tab opens a separate HTML page. No build tools are required.
+A static, multi-page academic site for GitHub Pages. No build step is needed.
 
-## Update the live GitHub Pages site
+## Publish the complete site
 
-1. Unzip this package and open `arm2lab-site`.
-2. In the GitHub repository, choose **Add file → Upload files**.
-3. Upload the files **inside** `arm2lab-site`, including all seven `.html` pages, `style.css`, `data.js`, `script.js`, and the `images` folder. Keep `index.html` at the repository root.
-4. Commit the changes. Existing files with matching names must be replaced; GitHub's web uploader may reject files already in the repository. If so, use GitHub Desktop, or edit each file in GitHub's web editor and upload the four new images through **Add file → Upload files**.
+Upload the **contents of this folder** to the root of your GitHub Pages repository. Keep `index.html`, the six other HTML pages, `data.js`, `script.js`, and `style.css` at the repository root. Keep every image inside `images/` (for example, `images/maria-koskinopoulou.jpg`). Replace earlier versions of files with the same names, then commit the changes.
 
-## Content
+If GitHub's web uploader refuses to replace an existing filename, edit that file through the GitHub web editor or use GitHub Desktop to copy the whole folder into a local clone and push the commit. Upload new pictures while browsing the repository's `images/` directory.
 
-Edit `data.js` to update members, publications, news and video links. The four supplied portraits were provisionally paired in attachment order with Adip, Sheena, Christopher and David; **verify the matches before publishing**. Jacob appears with initials until a photo is added. The fifth supplied photo is used for Prab Singh.
+The site includes publication author lists and direct article/PDF links, videos, research demonstrations, lab co-lead portraits, student portraits, institution logos, research photos, and news/recognition.
 
-The publication links currently lead to the researchers' publication lists. The video links currently lead to the old Google Site. Replace these with direct paper and video URLs when available.
+## Edit content
 
-Edit `index.html` for the lab description and research areas; edit `style.css` for typography, colour and layout.
+- `data.js`: people, publications, dated news, additional recognition, and video links.
+- `index.html`: introductory text and home-page images.
+- `research.html`: research areas and embedded videos.
+- `style.css`: colours and layout.
 
-To preview locally, open `index.html` in a browser, or run `python3 -m http.server 8000` in this folder and visit `http://localhost:8000`.
+For a local preview, run `python3 -m http.server 8000` in this folder and open `http://localhost:8000/`.

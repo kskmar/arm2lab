@@ -1,8 +1,14 @@
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeUrl = s => /^https:\/\//.test(s) ? s : '#';
 document.querySelector('#year').textContent = new Date().getFullYear();
+const footerContent = document.querySelector('footer .container');
+if(footerContent) footerContent.insertAdjacentHTML('afterbegin', '<div class="footer-logos"><a href="https://www.hw.ac.uk/" target="_blank" rel="noopener"><img src="images/heriot-watt-logo.png" alt="Heriot-Watt University" loading="lazy"></a><a href="https://thenationalrobotarium.com/" target="_blank" rel="noopener"><img src="images/national-robotarium-logo.png" alt="The National Robotarium" loading="lazy"></a></div>');
 if(document.querySelector('#member-list')) document.querySelector('#member-list').innerHTML = members.map(m => `<article class="member">${m.image ? `<img class="portrait" src="${esc(m.image)}" alt="Portrait of ${esc(m.name)}" loading="lazy">` : `<div class="portrait initials" aria-hidden="true">${esc(m.name.split(' ').map(x=>x[0]).join(''))}</div>`}<div><h4>${esc(m.name)}</h4><p>${esc(m.role)}</p></div></article>`).join('');
-if(document.querySelector('#news-list')) document.querySelector('#news-list').innerHTML = news.map(n => `<div class="news-item"><time>${esc(n.date)}</time><p><a href="${esc(safeUrl(n.url))}" target="_blank" rel="noopener">${esc(n.title)} ↗</a></p></div>`).join('');
+if(document.querySelector('#news-list')) {
+  const entries = document.querySelector('#home') ? news.slice(0,4) : news;
+  document.querySelector('#news-list').innerHTML = entries.map(n => `<div class="news-item"><time>${esc(n.date)}</time><p>${n.url ? `<a href="${esc(safeUrl(n.url))}" target="_blank" rel="noopener">${esc(n.title)} ↗</a>` : esc(n.title)}${n.video ? ` <a class="news-video-link" href="${esc(safeUrl(n.video))}" target="_blank" rel="noopener">Watch the episode ↗</a>` : ''}</p></div>`).join('');
+}
+if(document.querySelector('#honours-list')) document.querySelector('#honours-list').innerHTML = additionalHonours.map(title => `<li>${esc(title)}</li>`).join('');
 if(document.querySelector('#paper-list')) {
   const list = document.querySelector('#paper-list');
   const years = [...new Set(papers.map(p => p.year))].sort((a,b) => b-a);
