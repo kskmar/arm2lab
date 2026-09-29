@@ -11,7 +11,14 @@ if(document.querySelector('#paper-list')) {
     return `<article class="paper"><div><h3><a href="${esc(safeUrl(article))}" target="_blank" rel="noopener">${esc(p.title)}</a></h3><p class="paper-authors">${esc(p.authors)}</p><p>${esc(p.venue)}${p.shared ? ' <span class="shared-badge">With Ignacio Carlucho</span>' : ''}</p><div class="paper-links">${p.pdf ? `<a href="${esc(safeUrl(p.pdf))}" target="_blank" rel="noopener" aria-label="PDF of ${esc(p.title)}">PDF ↗</a>` : ''}<a href="${esc(safeUrl(article))}" target="_blank" rel="noopener">${p.doi ? 'DOI' : 'Record'} ↗</a></div></div></article>`;
   }).join('')}</section>`).join('');
 }
-if(document.querySelector('#video-list')) document.querySelector('#video-list').innerHTML = videos.map(v => `<a class="video-item" href="${esc(safeUrl(v.url))}" target="_blank" rel="noopener"><small>${esc(v.label)}</small><h3>${esc(v.title)} ↗</h3></a>`).join('');
+if(document.querySelector('#video-list')) {
+  const list = document.querySelector('#video-list');
+  list.innerHTML = videos.map(v => `<article class="video-card"><div class="video-frame"><button class="video-play" type="button" data-video="${esc(v.id)}" aria-label="Play ${esc(v.title)}"><img src="https://i.ytimg.com/vi/${esc(v.id)}/hqdefault.jpg" alt="" loading="lazy"><span class="play-symbol" aria-hidden="true">▶</span></button></div><div class="video-caption"><span class="video-label">${esc(v.label)}</span><h3>${esc(v.title)}</h3><a href="https://www.youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener">Open on YouTube ↗</a></div></article>`).join('');
+}
+document.querySelectorAll('.video-play').forEach(button => button.addEventListener('click', () => {
+  const id = button.dataset.video;
+  button.parentElement.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1" title="${esc(button.getAttribute('aria-label'))}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+}));
 const toggle = document.querySelector('.menu-toggle'), nav = document.querySelector('nav');
 toggle.addEventListener('click', () => {const open = nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close menu':'Open menu')});
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));
