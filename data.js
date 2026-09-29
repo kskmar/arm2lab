@@ -42,14 +42,14 @@ const papers = [
   { year: 2016, authors: 'Maria Koskinopoulou, Stylianos Piperakis, Panos Trahanias', title: 'Learning from demonstration facilitates human-robot collaborative task execution', venue: 'ACM/IEEE International Conference on Human-Robot Interaction', doi: '10.1109/HRI.2016.7451734' }
 ];
 const news = [
-  { date: '2026', title: 'Royal Society Research Grant (£30,000) awarded for “Perception and Sensor Fusion for Robotic Needle Steering in Deformable Environments”; project starts 1 October 2026', url: 'https://hw-rmas.worktribe.com/record.jx?recordid=1881893' },
-  { date: 'Aug 2026', title: 'eGRAP published at IEEE/ASME AIM 2026', url: 'https://doi.org/10.1109/AIM65483.2026.11658063' },
-  { date: 'Aug 2026', title: 'Cathbot-Pro published in IEEE Transactions on Medical Robotics and Bionics', url: 'https://doi.org/10.1109/TMRB.2026.3722331' },
-  { date: 'Jun 2026', title: 'Maria joins Robot Talk for Episode 159: “Robot sensing and manipulation”', url: 'https://www.robottalk.org/2026/06/05/episode-159-maria-koskinopoulou/', video: 'https://www.youtube.com/watch?v=fimNuQGfcLE' },
-  { date: 'May 2024', title: 'Maria is named as a co-inventor on patent WO2024089289A1, a catheterization device with automatic needle insertion and rotation', url: 'https://patents.google.com/patent/WO2024089289A1/en' },
+  { date: '2026', title: 'Royal Society Research Grant (£30,000) awarded for “Perception and Sensor Fusion for Robotic Needle Steering in Deformable Environments”; project starts 1 October 2026', url: 'https://hw-rmas.worktribe.com/record.jx?recordid=1881893', linkLabel: 'Grant' },
+  { date: 'Aug 2026', title: 'eGRAP published at IEEE/ASME AIM 2026', url: 'https://doi.org/10.1109/AIM65483.2026.11658063', linkLabel: 'Paper' },
+  { date: 'Aug 2026', title: 'Cathbot-Pro published in IEEE Transactions on Medical Robotics and Bionics', url: 'https://doi.org/10.1109/TMRB.2026.3722331', linkLabel: 'Paper' },
+  { date: 'Jun 2026', title: 'Maria joins Robot Talk for Episode 159: “Robot sensing and manipulation”', url: 'https://www.robottalk.org/2026/06/05/episode-159-maria-koskinopoulou/', video: 'https://www.youtube.com/watch?v=fimNuQGfcLE', linkLabel: 'Podcast' },
+  { date: 'May 2024', title: 'Maria is named as a co-inventor on patent WO2024089289A1, a catheterization device with automatic needle insertion and rotation', url: 'https://patents.google.com/patent/WO2024089289A1/en', linkLabel: 'Patent' },
   { date: '2022', title: 'Best Presentation Award, IEEE ICARA 2022' },
-  { date: '2018–19', title: 'PhD research scholarship at ABB Corporate Research, Sweden', url: 'https://sites.google.com/view/mariakoskinopoulou/research' },
-  { date: '2017–19', title: 'Hellenic Foundation for Research and Innovation (HFRI) PhD Fellowship', url: 'https://sites.google.com/view/mariakoskinopoulou/research' },
+  { date: '2018–19', title: 'PhD research scholarship at ABB Corporate Research, Sweden', url: 'https://sites.google.com/view/mariakoskinopoulou/research', linkLabel: 'Background' },
+  { date: '2017–19', title: 'Hellenic Foundation for Research and Innovation (HFRI) PhD Fellowship', url: 'https://sites.google.com/view/mariakoskinopoulou/research', linkLabel: 'Background' },
   { date: '2016', title: 'IEEE-RAS Humanoids travel award' }
 ];
 const additionalHonours = [

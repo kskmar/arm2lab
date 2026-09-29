@@ -6,7 +6,7 @@ if(footerContent) footerContent.insertAdjacentHTML('afterbegin', '<div class="fo
 if(document.querySelector('#member-list')) document.querySelector('#member-list').innerHTML = members.map(m => `<article class="member">${m.image ? `<img class="portrait" src="${esc(m.image)}" alt="Portrait of ${esc(m.name)}" loading="lazy">` : `<div class="portrait initials" aria-hidden="true">${esc(m.name.split(' ').map(x=>x[0]).join(''))}</div>`}<div><h4>${esc(m.name)}</h4><p>${esc(m.role)}</p></div></article>`).join('');
 if(document.querySelector('#news-list')) {
   const entries = document.querySelector('#home') ? news.slice(0,4) : news;
-  document.querySelector('#news-list').innerHTML = entries.map(n => `<div class="news-item"><time>${esc(n.date)}</time><p>${n.url ? `<a href="${esc(safeUrl(n.url))}" target="_blank" rel="noopener">${esc(n.title)} ↗</a>` : esc(n.title)}${n.video ? ` <a class="news-video-link" href="${esc(safeUrl(n.video))}" target="_blank" rel="noopener">Watch the episode ↗</a>` : ''}</p></div>`).join('');
+  document.querySelector('#news-list').innerHTML = entries.map(n => `<div class="news-item"><time>${esc(n.date)}</time><p>${esc(n.title)}${n.url ? ` <a class="news-detail-link" href="${esc(safeUrl(n.url))}" target="_blank" rel="noopener">${esc(n.linkLabel || 'Details')} ↗</a>` : ''}${n.video ? ` <a class="news-detail-link" href="${esc(safeUrl(n.video))}" target="_blank" rel="noopener">Video ↗</a>` : ''}</p></div>`).join('');
 }
 if(document.querySelector('#honours-list')) document.querySelector('#honours-list').innerHTML = additionalHonours.map(title => `<li>${esc(title)}</li>`).join('');
 if(document.querySelector('#paper-list')) {
