@@ -1,15 +1,15 @@
 // Edit the lists below to update people, publications, news and videos.
 // The first four portraits follow the order of the supplied images; verify names before public use.
 const members = [
-  { name: 'Adip Ranjan Das', role: 'PhD student', image: 'images/adip.png' },
-  { name: 'Sheena Shabana', role: 'PhD student', image: 'images/sheena.png' },
-  { name: 'Christopher Jenner', role: 'PhD student', image: 'images/christopher.png' },
-  { name: 'David Neilan', role: 'PhD student', image: 'images/david.png' },
-  { name: 'Jacob Mitchell', role: 'PhD student' },
-  { name: 'Prab Singh', role: 'PhD student', image: 'images/prab.png' },
+  { name: 'Adip Ranjan Das', role: 'PhD student', image: 'images/adip.png', supervisors: [{ name: 'Xianwen Kong', url: 'https://researchportal.hw.ac.uk/en/persons/xianwen-kong/' }], project: 'Adaptive dual-arm disassembly of electronic devices.' },
+  { name: 'Sheena Shabana', role: 'D2AIR CDT PhD student', image: 'images/sheena.png', supervisors: [{ name: 'Marta Vallejo', url: 'https://researchportal.hw.ac.uk/en/persons/marta-vallejo/' }, { name: 'Karen Donaldson', url: 'https://www.research.ed.ac.uk/en/persons/karen-donaldson/' }], project: 'Precision robotic needle interventions in soft tissues.' },
+  { name: 'Christopher Jenner', role: 'PhD student', image: 'images/christopher.png', supervisors: [{ name: 'Richard Carter', url: 'https://researchportal.hw.ac.uk/en/persons/richard-carter/' }, { name: 'Mehrdad Yaghoobi Vaighan', url: 'https://www.research.ed.ac.uk/en/persons/mehrdad-yaghoobi-vaighan/' }, { name: 'Stephen Beecher (Leonardo)' }], project: 'Dexterous manipulation for high-precision optical assembly.' },
+  { name: 'David Neilan', role: 'PhD student', image: 'images/david.png', supervisors: [{ name: 'Ignacio Carlucho', url: 'https://researchportal.hw.ac.uk/en/persons/ignacio-carlucho/' }, { name: 'Steven McDonagh', url: 'https://eng.ed.ac.uk/about/people/dr-steven-mcdonagh' }, { name: 'Adam Fleming (Leonardo)', url: 'https://uk.linkedin.com/in/adam-fleming-7448b4168' }], project: 'Vision-language agents for enhanced human-robot interaction in manufacturing.' },
+  { name: 'Jacob Mitchell', role: 'D2AIR CDT PhD student', supervisors: [{ name: 'Frédéric Bosché (University of Edinburgh)', url: 'https://eng.ed.ac.uk/about/people/dr-frederic-bosche' }], project: 'Robotics for construction.' },
+  { name: 'Prab Singh', role: 'D2AIR CDT PhD student', image: 'images/prab.png', supervisors: [{ name: 'Barbara Webb', url: 'https://homepages.inf.ed.ac.uk/bwebb/' }], project: 'Autonomous crop monitoring for UK wheat crops.' },
   { name: 'Robbie McPherson', role: 'PhD student', image: 'images/robbie-mcpherson.jpeg', project: 'Reinforcement learning for the control of aerial vehicles.' },
   { name: 'Ivalin Chobanov', role: 'PhD student', image: 'images/ivalin-chobanov.jpeg', url: 'https://ivalin.com/', supervisors: [{ name: 'Prof. Ram Ramamoorthy', url: 'https://people.inf.ed.ac.uk/Ram_Ramamoorthy.html' }], project: 'Advancing multi-agent reinforcement learning.' },
-  { name: 'Ulixes Hawili', role: 'PhD student', image: 'images/ulixes-hawili.jpg', supervisors: [{ name: 'Prof. Ram Ramamoorthy', url: 'https://people.inf.ed.ac.uk/Ram_Ramamoorthy.html' }, { name: 'Prof. Yoann Altmann' }], project: 'Zero-shot coordination and multi-agent systems.' },
+  { name: 'Ulixes Hawili', role: 'PhD student', image: 'images/ulixes-hawili.jpg', supervisors: [{ name: 'Prof. Ram Ramamoorthy', url: 'https://people.inf.ed.ac.uk/Ram_Ramamoorthy.html' }, { name: 'Prof. Yoann Altmann', url: 'https://researchportal.hw.ac.uk/en/persons/yoann-altmann/' }], project: 'Zero-shot coordination and multi-agent systems.' },
   { name: 'Favour Adetunji', role: 'PhD student', image: 'images/favour-adetunji.jpg', supervisors: [{ name: 'Maria Koskinopoulou', url: 'https://researchportal.hw.ac.uk/en/persons/maria-koskinopoulou' }], project: 'Pipe and cable tracking for autonomous underwater vehicles.' }
 ];
 const papers = [
