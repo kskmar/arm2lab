@@ -6,7 +6,11 @@ const members = [
   { name: 'Christopher Jenner', role: 'PhD student', image: 'images/christopher.png' },
   { name: 'David Neilan', role: 'PhD student', image: 'images/david.png' },
   { name: 'Jacob Mitchell', role: 'PhD student' },
-  { name: 'Prab Singh', role: 'PhD student', image: 'images/prab.png' }
+  { name: 'Prab Singh', role: 'PhD student', image: 'images/prab.png' },
+  { name: 'Robbie McPherson', role: 'PhD student', image: 'images/robbie-mcpherson.jpeg', project: 'Reinforcement learning for the control of aerial vehicles.' },
+  { name: 'Ivalin Chobanov', role: 'PhD student', image: 'images/ivalin-chobanov.jpeg', url: 'https://ivalin.com/', supervisors: [{ name: 'Prof. Ram Ramamoorthy', url: 'https://people.inf.ed.ac.uk/Ram_Ramamoorthy.html' }], project: 'Advancing multi-agent reinforcement learning.' },
+  { name: 'Ulixes Hawili', role: 'PhD student', image: 'images/ulixes-hawili.jpg', supervisors: [{ name: 'Prof. Ram Ramamoorthy', url: 'https://people.inf.ed.ac.uk/Ram_Ramamoorthy.html' }, { name: 'Prof. Yoann Altmann' }], project: 'Zero-shot coordination and multi-agent systems.' },
+  { name: 'Favour Adetunji', role: 'PhD student', image: 'images/favour-adetunji.jpg', supervisors: [{ name: 'Maria Koskinopoulou', url: 'https://researchportal.hw.ac.uk/en/persons/maria-koskinopoulou' }], project: 'Pipe and cable tracking for autonomous underwater vehicles.' }
 ];
 const papers = [
   { year: 2026, authors: 'Maria Koskinopoulou, Alperen Acemoglu, Lorenzo Civati, Leonardo S. Mattos', title: 'Cathbot-Pro: A Handheld Robotic Device for Vision-Guided Peripheral Intravenous Catheterization Using NIR Imaging', venue: 'IEEE Transactions on Medical Robotics and Bionics', doi: '10.1109/TMRB.2026.3722331', pdf: 'https://researchportal.hw.ac.uk/files/174371189/Cathbot-Pro_A_Handheld_Robotic_Device_for_Vision-Guided_Peripheral_Intravenous_Catheterization_Using_NIR_Imaging.pdf' },
